@@ -54,7 +54,7 @@ final class WP_Corl_Meta_Box_Page
                 <span>Add to background blue gradient : </span>
             </label>
             <select name="_wp_corl_background_body" id="wp-corl-bakcground-body" class="postbox" style="margin-bottom: 0;margin-left: 15px">
-                <option value="disable">Select something...</option>
+                <option value="disable">Disable</option>
                 <option value="active" <?php selected($value, 'active'); ?>>Active</option>
 
             </select>
