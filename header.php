@@ -24,7 +24,7 @@
 <body <?php body_class(); ?>> 
 <?php wp_body_open(); ?>
 
-    <main class="main-wrapper     <?php if(is_front_page()){ echo "body_shape";}else{echo "inner_page";} ?>">
+    <main class="main-wrapper   <?php if(is_front_page()||get_post_meta(get_the_ID(),'_wp_corl_background_body',true)==='active'){ echo "body_shape";}else{echo "inner_page";} ?>">
     <div id="particles2-js" class="particles_2"></div>
         <!-- .....:::::: Start Header Section :::::.... -->
         <header class="header-section sticky-header">

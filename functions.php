@@ -204,6 +204,13 @@ add_action('wp_enqueue_scripts', 'corl_scripts');
 require get_template_directory() . '/inc/custom-header.php';
 
 /**
+ * Add custom meta box page and post
+ */
+require get_template_directory() . '/inc/meta-box.php';
+
+new WP_Corl_Meta_Box_Page();
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
