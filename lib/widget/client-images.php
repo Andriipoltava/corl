@@ -93,7 +93,9 @@ class ClientImagesWidget extends Widget_Base{
                                     <?php
                                     
                                     foreach ( $client_images_gallery as $cleintimage ) {
-                                        echo '<li><img src="' .$cleintimage['url']. '"></li>';
+                                        echo '<li class="mx-3">';
+                                        echo wp_get_attachment_image($cleintimage['id'],'medium');
+                                        echo '</li>';
                                     }
                                     
                                     ?>

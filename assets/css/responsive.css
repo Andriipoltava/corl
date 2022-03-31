@@ -837,14 +837,15 @@
     }
 
     .client_area .client_logos li {
-        width: 33%;
+        width: 40%;
         margin-bottom: 20px;
         text-align: left;
     }
 
 
     .client_area .client_logos li img{
-       width: 80%;
+        margin: 0 auto;
+        display: block;
     }
 
 
