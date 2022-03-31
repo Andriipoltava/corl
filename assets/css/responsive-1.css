@@ -1,0 +1,1415 @@
+ @media only screen and (min-device-width: 320px) and (max-device-width: 576px) {
+     .container,
+     .container-sm {
+         max-width: 420px !important;
+     }
+ }
+ 
+ @media only screen and (min-device-width: 577px) and (max-device-width: 767px) {
+     .container,
+     .container-sm {
+         max-width: 420px !important;
+     }
+     .success_stories {
+        padding: 80px 0px 50px 0px !important;
+    }
+     .amount_calculate .container {
+         max-width: 625px !important;
+     }
+    .success_stories .section_title h2 {
+        font-size: 24px !important;
+        font-weight: 700 !important;
+    }
+
+ }
+ 
+ 
+ @media (min-width: 700px) {
+     .amount_calculate .amount_chart_box {
+         background: #FFFFFF;
+         box-shadow: 15px 30px 80px rgba(125, 149, 169, 0.2);
+         border-radius: 20px;
+         padding: 40px;
+         display: block !important;
+     }
+     .amount_calculate .phone_chart_box {
+         display: none;
+     }
+     .amount_calculate .angle_shape {
+         display: none;
+     }
+ }
+ @media (min-width: 1601px){
+    .sass_financing  .commerce_finance_banner {
+        position: unset;
+        padding: 60px;
+    }
+    .ecommerce_financing_heading.sass_financing {
+        padding: 0 60px 0px;
+    }
+ }
+
+
+
+
+
+ @media (max-width:1500px) {
+    header.header-section.sticky-header {
+        /*display: none;*/
+        padding: 0 15px;
+    }
+    .header-section {
+        width: 100%;
+        z-index: 999;
+    }
+    .section_heading h2 br {
+        display: none;
+    }
+ }
+ @media only screen and (min-device-width: 1024px) and (max-device-width: 1500px) {
+    .header-section {
+        padding: 0 30px;
+    }
+     .hero-display-section {
+         min-height: 540px;
+     }
+     .hero-display-section .box-wrappr {
+         width: 50%;
+         padding-top: 70px;
+     }
+     .hero-display-section .box-wrappr h1 {
+         font-size: 55px;
+     }
+     .hero-display-section .box-wrappr p {
+         font-size: 18px;
+     }
+     .newsletter {
+         padding-top: 20px;
+     }
+     .amount_calculate {
+         padding: 60px 15px 0;
+     }
+     .sass_commerce .banner_shape .sass_shape_1 {
+        transform: scale(0.7) !important;
+    }
+    .sass_commerce .banner_shape img.shape_1 {
+        top: 0;
+        transform: unset;
+        z-index: -1;
+    }
+
+    .how_it_works.ecommerce_works .how_it_works_single_items {
+        min-width: 245px;
+        padding: 30px 15px;
+    }
+
+    .ecommerce_financing_heading .hero-content {
+        padding-right: 0;
+    }
+    .ecommerce_financing_heading .change_narrative {
+        margin-right: 0;
+    }
+
+         .capital_opportunities.opportunitie_two .case_study_info ul {
+    margin-right: 35px;
+    border-right: 1px solid #DDEBF4;
+    padding-right: 35px;
+}
+
+.case_study_style_3 .capital_opportunities_title h2 {
+    font-size: 24px;
+}
+
+.case_study_style_3 .capital_opportunities_title {
+    margin-bottom: -70px;
+}
+
+.how_it_works.ecommerce_works.case_study_works.case_work_style_3 {
+    margin: 0 15px;
+    padding: 66px 60px;
+}
+.how_it_works.ecommerce_works.case_study_works.case_work_style_3 .section_title {
+    padding-right: 0;
+}
+
+
+.ecommerce_financing_heading {
+    margin: 0 15px 165px;
+}
+
+.partner_ship .partner_ship_single_items {
+    padding: 15px;
+    margin: 20px 0px;
+}
+.partner_ship .partner_ship_single_items .content p {
+    font-size: 14px;
+}
+
+.ecommerce_financing_heading.sass_financing {
+    padding: 0 60px 150px;
+    margin-bottom: 80px;
+}
+
+.how_it_works {
+    padding: 120px 30px;
+    margin: 0 15px;
+}
+.how_it_works_single_items::before {
+    right: -34%;
+}
+
+
+
+.sass_financing .sass_check ul li {
+    padding-right: 10px;
+}
+
+
+
+
+
+ }
+ 
+ @media (min-width: 1200px) {
+     .container,
+     .container-lg,
+     .container-md,
+     .container-sm,
+     .container-xl {
+         max-width: 1170px;
+     }
+ }
+ 
+ @media only screen and (max-width: 767px) {
+     .section_heading h2,
+     .section_title h2 {
+         font-size: 26px !important;
+         line-height: 130% !important;
+     }
+     .button_style .button_style_1 {
+         height: 55px !important;
+         line-height: 55px !important;
+     }
+     .success_stories .button_style {
+         margin-top: 30px !important;
+     }
+
+
+
+ }
+ /* Section Heading Title Default Style*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ @media (min-width: 1400px) {
+     .mobile-contact-info .social-link a {
+         width: 55px;
+         height: 55px;
+         line-height: 55px;
+         margin-right: 25px;
+     }
+
+
+}
+
+ /************************************
+* Phone Layouts - Header
+************************************/
+ /*Main Sticky Menu Style*/
+ @media (max-width: 768px) {
+     header.header-section.sticky-header {
+         display: none;
+     }
+     .header-section {
+         width: 100%;
+         z-index: 999;
+     }
+     .section_heading h2 br {
+         display: none;
+     }
+     .sass_financing .sass_check ul{
+        justify-content: space-between;
+        flex-wrap: wrap;
+     }
+      .sass_financing .sass_check ul li {
+        padding-right: 30px;
+        font-size: 16px;
+        text-align: left;
+    }
+    .sass_financing .sass_check ul li img{
+        width: 20px;
+    }
+    .sass_financing  .commerce_finance_banner {
+        position: unset;
+        padding: 30px 0;
+    }
+
+
+
+
+ 
+ /******* Header Hero Section**********/
+
+     .hero-display-section {
+         margin-top: 64px;
+         border-radius: 5px;
+         display: flex;
+         flex-direction: column-reverse;
+         padding: 0 25px;
+         min-height: 300px;
+         background: #46B8B4;
+     }
+     .hero-display-section::after {
+         display: none;
+     }
+     .hero-display-section .box-wrappr {
+         width: 100%;
+         padding-top: 36px;
+     }
+     .hero-display-section .box-wrappr h1 {
+         font-weight: 600;
+         font-size: 32px;
+         line-height: 130%;
+         text-align: center;
+     }
+     .hero-display-section .box-wrappr p {
+         text-align: center;
+         font-size: 14px;
+         line-height: 160%;
+         padding-top: 0;
+         margin-bottom: 0;
+     }
+     .newsletter {
+         padding-top: 25px;
+     }
+     .newsletter form .input-group {
+         width: 305px;
+         margin: 0px auto;
+     }
+     .newsletter input.form-control {
+         height: 45px;
+         padding-left: 15px;
+         border-right: none;
+     }
+     .newsletter button.btn.btn-theme {
+         height: 45px;
+         width: 110px;
+         font-size: 15px;
+     }
+     .hero-display-section .hero_banner {
+         position: unset;
+         height: auto;
+         width: 100%;
+         padding-top: 27px;
+     }
+     .header_shape {
+         display: none;
+     }
+     .hero-display-section .hero_banner img {
+         width: 100%;
+         border-radius: 5px;
+     }
+     .header_shape_bottom {
+         display: block;
+     }
+     img.header_shape_bottom {
+         position: absolute;
+         bottom: 0;
+         width: 100%;
+         left: 0;
+     }
+
+
+ /******* Start Company Logo Section**********/
+     .company-logo-display-sectionr {
+         padding: 80px 0 45px;
+     }
+     .clients_logo_items {
+         justify-content: center !important;
+     }
+     .clients_logo_items li {
+         margin: 0 13px 15px;
+     }
+     .clients_logo_items li img {
+         height: 19px !important;
+     }
+
+
+ /******* Why Corl Section*********=*/
+     .why_corl {
+         padding: 0 11px 154px;
+     }
+     .section_heading .sub_titile {
+         font-size: 16px;
+         margin-bottom: 9px;
+         line-height: 160%;
+     }
+     .why_corl .why_corl_single_items {
+         margin-bottom: 20px;
+     }
+     .why_corl .why_corl_single_items p {
+         margin-bottom: 10px;
+         font-size: 12px;
+         line-height: 160%;
+     }
+     .why_corl .why_corl_single_items .title_icon .icon {
+         background: #3F41AE !important;
+     }
+     .why_corl .why_corl_single_items:hover .title_icon .icon {
+         background: #496572 !important;
+     }
+     .why_corl .why_corl_button {
+         margin-top: 10px;
+     }
+ 
+
+ /******* Sass Financing Section **********/
+     .sass_commerce {
+         padding: 40px 0 0px;
+     }
+     .sass_commerce .sass_commerce_single_items {
+         max-width: 301px;
+         text-align: center;
+         margin: 0px auto 32px;
+     }
+     .sass_commerce .sass_commerce_single_items h4.title {
+         font-size: 20px;
+         line-height: 140%;
+     }
+     .sass_commerce .sass_commerce_single_items p {
+         font-size: 14px;
+     }
+     .sass_commerce .sass_commerce_single_items a {
+         font-size: 14px;
+     }
+     .sass_commerce .banner_shape img.shape_1 {
+         height: 100%;
+         position: unset;
+         top: 0;
+         right: 0;
+         transform: none;
+         width: 100%;
+     }
+ 
+
+ /******* How It Works Section **********/
+     .how_it_works {
+         padding: 120px 0 0;
+     }
+     .work_single_item_wrapper {
+        justify-content: center !important;
+     }
+     .how_it_works .how_it_works_single_items {
+         margin-bottom: 80px;
+     }
+     .how_it_works_single_items::before {
+         height: 24px;
+         width: 62px;
+         top: unset;
+         right: 38%;
+         transform: translateY(-50%) rotate(69deg) scaleY(-1) !important;
+         bottom: -27%;
+     }
+     .how_it_works_single_items:last-child {
+         margin-bottom: 52px;
+     }
+
+
+ /******* Amount Calculate phone_chart_box **********/
+     .amount_calculate {
+         margin: 0 10px;
+         padding: 160px 0 97px;
+     }
+     .amount_calculate .section_title br {
+         display: none;
+     }
+     .amount_calculate .section_title h2 {
+         font-weight: 600 !important;
+         padding: 0 15px;
+     }
+     .amount_calculate .phone_chart_box {
+         background: #ffffff;
+         margin: 0 10px;
+         padding: 15px;
+         box-shadow: 0 0 77px 2px rgb(0 0 0 / 5%);
+         border-radius: 5px;
+     }
+     .amount_calculate .phone_chart_box .form_wrapper {
+         border-right: none;
+         padding-right: 0;
+     }
+     .amount_calculate .phone_chart_box [type="radio"]:checked,
+     .amount_calculate .phone_chart_box [type="radio"]:not(:checked) {
+         position: absolute;
+         left: -9999px;
+     }
+     .amount_calculate .phone_chart_box [type="radio"]:checked+label,
+     .amount_calculate .phone_chart_box [type="radio"]:not(:checked)+label {
+         position: relative;
+         padding-left: 28px;
+         cursor: pointer;
+         line-height: 20px;
+         display: inline-block;
+         color: #666;
+     }
+     .amount_calculate .phone_chart_box [type="radio"]:checked+label:before,
+     .amount_calculate .phone_chart_box [type="radio"]:not(:checked)+label:before {
+         content: '';
+         position: absolute;
+         left: 0;
+         top: 0;
+         width: 22px;
+         height: 22px;
+         border: 1px solid #ddd;
+         border-radius: 100%;
+         background: #fff;
+     }
+     .amount_calculate .phone_chart_box [type="radio"]:checked+label:after,
+     .amount_calculate .phone_chart_box [type="radio"]:not(:checked)+label:after {
+         content: '';
+         width: 14px;
+         height: 14px;
+         background: #17363A;
+         position: absolute;
+         top: 4px;
+         left: 4px;
+         border-radius: 100%;
+         -webkit-transition: all 0.2s ease;
+         transition: all 0.2s ease;
+     }
+     .amount_calculate .phone_chart_box [type="radio"]:not(:checked)+label:after {
+         opacity: 0;
+         -webkit-transform: scale(0);
+         transform: scale(0);
+     }
+     .amount_calculate .phone_chart_box [type="radio"]:checked+label:after {
+         opacity: 1;
+         -webkit-transform: scale(1);
+         transform: scale(1);
+     }
+     .amount_calculate .phone_chart_box .chouse_option {
+         text-align: left;
+         padding-left: 60px;
+         padding-top: 10px;
+     }
+     .amount_calculate .phone_chart_box a.check_button_style.text-white {
+         margin-top: 30px;
+     }
+     .amount_calculate .phone_chart_box h4 {
+         font-size: 18px !important;
+         font-weight: 700 !important;
+     }
+     .amount_calculate .phone_chart_box .terms .check_items ul li:first-child {
+         padding-bottom: 0;
+     }
+     .amount_calculate .phone_chart_box .terms .check_items ul li {
+         padding-top: 10px;
+     }
+     .amount_calculate .phone_chart_box .offters_count ul li {
+         border-bottom: 1px solid #D1D9DC;
+         padding: 14px 0;
+         font-size: 18px;
+         line-height: 160%;
+         color: #1B3F4F;
+     }
+     .amount_calculate .phone_chart_box offters_count ul li:last-child {
+         padding: 15px 0 0;
+         border: none;
+     }
+     .amount_calculate .phone_chart_box .offters_count ul li span {
+         font-size: 18px;
+         line-height: 160%;
+         color: #1B3F4F;
+         font-weight: 600;
+     }
+     .amount_calculate .phone_chart_box .check_eligibility a {
+         padding: 0 70px !important;
+         background: #E09945 !important;
+     }
+     .amount_calculate .phone_chart_box .get_started_btn a {
+         font-weight: 500;
+         font-size: 15.6779px;
+         line-height: 160%;
+         align-items: center;
+         text-align: center;
+         text-decoration-line: underline;
+         color: #2D81B9;
+         margin-top: 24px
+     }
+     .amount_calculate .phone_chart_box .get_started_btn.text-center {
+         padding-top: 20px;
+     }
+     .amount_calculate .angle_shape {
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         width: 100%;
+         z-index: -1;
+     }
+ 
+
+
+ /******* Success Stories *********/
+     .success_stories {
+         padding: 0px 0px 50px 0px;
+         margin-top: -30px;
+         z-index: 9;
+         position: relative;
+     }
+     .success_stories .section_title {
+         padding-bottom: 40px;
+     }
+     .success_stories .success_stories_wrapper .success_stories_single_items {
+         max-width: 100%;
+         border-right: none;
+     }
+     .success_stories .success_stories_wrapper {
+         margin: 0 10px;
+     }
+     .success_stories .success_stories_wrapper .success_stories_single_items {
+         max-width: 100%;
+         border-right: none;
+         padding-bottom: 0;
+     }
+     .stories_item_wrapper {
+         border-right: 1px solid #ABCDE3;
+         border-left: 1px solid #ABCDE3;
+         padding-bottom: 30px;
+         padding-top: 30px
+     }
+     .success_stories .success_stories_wrapper .success_stories_single_items:nth-child(1) .stories_item_wrapper {
+         padding-top: 0px;
+     }
+     .success_stories .success_stories_wrapper .success_stories_single_items:nth-child(4),
+     .success_stories .success_stories_wrapper .success_stories_single_items:nth-child(5) {
+         border-bottom: 1px solid #ABCDE3 !important;
+     }
+     .success_stories .success_stories_wrapper .success_stories_single_items:nth-child(4) .icon,
+     .success_stories .success_stories_wrapper .success_stories_single_items:nth-child(5) .icon,
+     .success_stories .success_stories_wrapper .success_stories_single_items:nth-child(6) .icon {
+         margin-top: 0px;
+     }
+     .success_stories_single_items:last-child {
+         border-bottom: none;
+     }
+     .success_stories_single_items:last-child .stories_item_wrapper {
+         padding-bottom: 0;
+     }
+     .success_stories .success_stories_wrapper .success_stories_single_items .stories_item_wrapper p {
+         font-size: 14px;
+         line-height: 160%;
+     }
+     .success_stories .success_stories_wrapper .success_stories_single_items .stories_item_wrapper {
+         padding-right: 35px;
+         padding-left: 35px;
+     }
+     .success_stories .section_title h2 {
+         font-size: 24px !important;
+         font-weight: 700 !important;
+     }
+     .success_stories .your_offer h5.offer-title {
+         font-size: 24px;
+         font-weight: 600;
+         padding-top: 40px;
+     }
+     .amount_calculate .terms .check_items {
+         border-top: 1px solid #D1D9DC;
+         margin-bottom: 40px;
+     }
+ 
+
+ /******* Testimonial Section Style ***********/
+     .testimonial {
+         padding-bottom: 30px;
+         margin: 0 10px;
+     }
+     .testimonial .testimonial_single_items {
+         margin-bottom: 20px;
+         padding: 20px;
+     }
+     .testimonial .testimonial_single_items .company_logo {
+         padding-bottom: 15px;
+         min-height: 50px;
+     }
+     .testimonial .testimonial_single_items .user_name_profile {
+         margin-top: 18px;
+         padding-top: 18px;
+     }
+     .testimonial .testimonial_single_items .content p {
+         font-size: 14px;
+     }
+     .testimonial .testimonial_single_items .user_name_profile .reviewer_name h4 {
+         font-size: 16px;
+     }
+     .testimonial .testimonial_single_items .user_name_profile .reviewer_name span {
+         font-size: 12px;
+     }
+ 
+
+
+
+ /********* Layouts - Footer ********/
+     .footer_section .footer_top {
+         padding: 40px 10px 20px;
+     }
+     .footer_section .section_title {
+         padding-bottom: 25px;
+     }
+     .footer_section .button_style .button_style_1 {
+         font-size: 14px;
+         margin-bottom: 20px;
+     }
+     .footer_section .button_style_1.active {
+         padding: 0 40px;
+     }
+     .footer_section .section_title {
+         padding: 0 15px 25px;
+     }
+     .footer_section .section_heading h2, .section_title h2 {
+        font-size: 24px !important;
+        line-height: 130% !important;
+        font-weight: 600;
+    }
+     .footer_section .footer_bottom .footer_logo {
+         text-align: center;
+     }
+     .footer_section .row.footer_menu_wrapper {
+         align-items: unset;
+     }
+     .footer_section .footer_bottom {
+         padding: 30px 48px 30px;
+     }
+     .footer_section .footer_bottom .footer_menu .footer-nav li a {
+         font-size: 12px;
+     }
+     .footer_section .footer_menu_wrapper {
+         padding-right: 0;
+     }
+     .footer_logo {
+         margin-bottom: 30px;
+     }
+     .footer_section .copyright_area .copyright_content_wrapper p {
+         width: 100%;
+         text-align: center;
+         padding: 0 15px;
+     }
+     .copyright_menu_social {
+         padding-top: 20px;
+         width: 100%;
+     }
+     .footer_section ul.footer-bottom-link.d-flex.flex-wrap {
+         justify-content: center;
+     }
+     .footer_section .copyright_area .footer-bottom-link li a {
+         padding-left: 15px;
+         font-weight: 500;
+         font-size: 14px;
+         line-height: 160%;
+         color: #768A8D;
+         margin-right: 15px;
+     }
+     .footer_section .copyright_area .footer-bottom-social {
+         float: unset;
+         padding-top: 19px;
+         justify-content: center;
+     }
+     .footer_section .copyright_area {
+         padding: 30px 0 40px;
+     }
+     .footer_section .copyright_area .footer-bottom-link li a {
+         font-size: 12px;
+     }
+     .footer_section .footer_bottom .footer_menu .footer-nav li {
+         width: 100%;
+     }
+
+
+
+
+
+
+
+
+
+     .ecommerce_financing_heading {
+        margin: 66px 10px 65px;
+        padding: 0px 15px 0px;
+        text-align: center;
+    }
+    .commerce_finance_banner {
+        position: unset;
+    }
+    section.why_corl.ecommece_why_corl .section_title {
+        padding: 0 18% 40px;
+    }
+    .ecommerce_financing_heading .hero-content {
+        padding-right: 0;
+        padding-top:25px;
+    }
+    .ecommerce_financing_heading .hero-content h1 {
+        font-size: 18px;
+        line-height: 160%;
+    }
+    .ecommerce_financing_heading .hero-content p {
+        font-size: 24px;
+    }
+    .ecommerce_financing_heading .change_narrative {
+        margin-right: 0;
+    }
+    .ecommerce_financing_heading .change_narrative h4 {
+        font-size: 12px;
+    }
+    .ecommerce_financing_heading .change_narrative .check_items ul li {
+        padding-top: 8px;
+        font-size: 12px;
+    }
+    .ecommerce_financing_heading .change_narrative .check_items ul li .icon {
+        padding-right: 5px;
+    }
+    .ecommerce_financing_heading .change_narrative .check_items ul li .icon img {
+        width: 16px;
+    }
+
+
+
+
+
+
+
+
+    .how_it_works.ecommerce_works {
+        padding: 30px 0;
+    }
+    section.how_it_works.ecommerce_works .how_it_works_single_items {
+        margin-bottom: 24px;
+    }
+    section.how_it_works.ecommerce_works .how_it_works_single_items::before {
+        transform: translateX(-50%) rotate(75deg) scaleY(-1) !important;
+        bottom: -18px;
+        left: 50%;
+        top: unset;
+    }
+
+    .case_studies {
+        padding: 120px 10px 140px;
+    }
+    .case_studies .case_studies_single {
+        margin-bottom: 26px;
+    }
+    .case_studies .button_style {
+        margin-top: 0;
+    }
+
+
+
+
+
+
+.ecommerce_financing_heading.meet_corl {
+    margin: 0 10px 0;
+}
+.ecommerce_financing_heading.meet_corl .hero-content span.quote {
+    padding-left: 30px;
+    text-align: left;
+        max-width: 100%;
+    margin-left: 15px;
+}
+.ecommerce_financing_heading.meet_corl .commerce_finance_banner .twoin_img li:first-child{
+    margin-right: 20px;
+}
+.clients_logo_items li {
+    margin: 0 7px 15px;
+    width: 25%;
+}
+.company-logo-display-sectionr.meet_logo_style img {
+    height: auto !important;
+    width: 100%;
+}
+
+
+
+
+
+
+.our_team {
+    background: #FCF5EC;
+    padding: 30px 30px 60px;
+    margin: 0 10px 60px;
+    border-radius: 10px;
+}
+.our_team .section_heading p {
+    font-size: 14px;
+}
+
+.team_single_member h4 {
+    font-size: 18px;
+}
+.team_single_member span {
+    font-size: 14px;
+}
+
+.block_design_one{
+    text-align: center;
+    padding: 10px;
+}
+.block_design_one .block_one_content h2 {
+    font-size: 24px;
+}
+.row.block_design_items {
+    flex-direction: column-reverse;
+}
+.block_design_one .block_one_content p {
+    font-size: 12px;
+    line-height: 160%;
+}
+
+.meet_Corl_block.Investor_block .block_design_one_wrapper {
+    margin-left: 0px;
+}
+.company-logo-display-sectionr.meet_logo_style.partner {
+    padding: 80px 0;
+}
+
+
+.case_study_hero {
+    padding: 60px 0 80px;
+}
+.case_study_hero .hero-content {
+    padding-right: 0;
+}
+.case_study_hero .hero-content {
+    padding-right: 0;
+    text-align: center;
+    padding: 40px 20px;
+}
+.case_study_info {
+    text-align: center;
+    padding: 0 15px;
+    margin-bottom: 40px;
+}
+.case_study_info ul {
+    margin-right: 25px;
+}
+.case_study_hero .commerce_finance_banner {
+    position: unset;
+    padding: 10px;
+}
+
+.capital_opportunities.case_study_opportunities {
+    margin-bottom: 60px;
+    text-align: center;
+    padding: 0 15px;
+}
+.capital_opportunities .capital_banner img {
+    margin-right: 0;
+}
+
+section.how_it_works.ecommerce_works.case_study_works{
+    padding: 30px 15px;
+}
+.testimonial_style_two {
+    padding: 120px 15px 120px;
+    position: relative;
+}
+section.how_it_works.ecommerce_works.case_study_works {
+    padding: 50px 15px;
+}
+
+.capital_opportunities.case_study_opportunities .capital_opportunities_title {
+    padding-right: 0;
+    margin-bottom: 40px;
+    padding: 60px 15px;
+}
+.capital_opportunities.case_study_opportunities .capital_opportunities_title h2 {
+    font-size: 24px;
+}
+.capital_opportunities .capital_opportunities_title span {
+    font-size: 18px;
+}
+.capital_banner_wrapper {
+    margin-left: 20px;
+}
+.capital_opportunities .capital_banner:before {
+    bottom: -15px;
+    left: -15px;
+}
+.testimonial_style_two {
+    padding: 80px 15px 120px;
+}
+.testimonial_style_two .content p {
+    font-size: 16px;
+}
+
+
+.case_study_info {
+    justify-content: center;
+}
+.case_study_hero .commerce_finance_banner  img.img-fluid {
+    width: 100%;
+}
+
+
+
+.case_study_hero.style_2 .hero-content h1 {
+    font-size: 32px;
+}
+.capital_opportunities.opportunitie_two {
+    padding: 100px 15px 0;
+    text-align: center;
+}
+.capital_opportunities.opportunitie_two .capital_opportunities_title h2 {
+    font-size: 24px;
+}
+.capital_opportunities.opportunitie_two .capital_opportunities_title span {
+    font-size: 18px;
+}
+.capital_opportunities.opportunitie_two .capital_banner_wrapper img {
+    margin-left: 0;
+    transform: scale(1);
+}
+.capital_opportunities.opportunitie_two .case_study_info ul {
+    margin-right: 5px;
+    padding-right: 15px;
+}
+.capital_opportunities.opportunitie_two .case_study_info img {
+    width: 100%;
+}
+.case_study_info ul li:last-child {
+    font-size: 14px;
+    padding-top: 16px;
+}
+.capital_opportunities.opportunitie_two .case_study_info {
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+.testimonial_style_two .testimonial_content p {
+    font-size: 14px;
+}
+.testimonial_style_two .testimonial_content {
+    margin: 0;
+}
+section.how_it_works.ecommerce_works.case_study_works.two {
+    margin: 0px 10px 120px;
+    border-radius: 10px;
+}
+.case_study_hero.style_2 .commerce_finance_banner {
+    position: unset;
+}
+
+
+.case_study_style_3 {
+    padding: 80px 15px;
+    text-align: center;
+}
+.case_study_hero.case_study_hero3 {
+    padding: 50px 15px 64px;
+    background: #46B8B4;
+    overflow: hidden;
+    text-align: center;
+}
+.case_study_style_3 .capital_opportunities_title {
+    padding-right: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    position: relative;
+    margin-bottom: 30px;
+    z-index: 9;
+}
+.case_study_style_3 .capital_opportunities_title h2 {
+    font-size: 24px;
+}
+.case_study_style_3 .capital_opportunities_title span {
+    font-size: 18px;
+}
+.case_study_style_3 .capital_banner_wrapper {
+    margin-left: 0;
+    margin-top: 30px;
+}
+
+
+
+.how_it_works.ecommerce_works.case_study_works.case_work_style_3 {
+    margin: 0 10px;
+    padding: 66px 15px;
+    text-align: center;
+}
+.how_it_works.ecommerce_works.case_study_works .section_title span {
+    font-size: 18px;
+}
+
+.how_it_works.ecommerce_works.case_study_works.case_work_style_3 .section_title {
+    padding-right: 0;
+}
+.testimonial_style_three .content_wrapper p {
+    font-size: 14px;
+}
+.testimonial_style_three .single_testimonial_item {
+    margin: 0 15px 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ecommerce_financing_heading.meet_corl.partner {
+    margin: 60px 10px 60px;
+    padding: 0px 15px 0px;
+}
+
+.faq-section .accordion .accordion-item .accordion-header .accordion-button {
+    font-size: 12px;
+
+}
+
+.faq-section .accordion .accordion-item .accordion-body {
+    font-size: 12px;
+    padding-right: 0;
+}
+
+
+
+
+.ecommerce_financing_heading.sass_financing.loop_case {
+    padding: 30px 15px 0px;
+    margin-bottom: 100px;
+}
+.ecommerce_financing_heading.sass_financing.loop_case .commerce_finance_banner {
+    position: unset;
+    padding: 60px 0 0;
+}
+.how_it_works.ecommerce_works.case_study_works.loop_study .section_title {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+
+.partner_ship .partner_ship_single_items .content p {
+    font-size: 14px;
+}
+
+.ecommerce_financing_heading.sass_financing {
+    padding: 30px 15px 0px;
+    margin-bottom: 80px;
+}
+
+.ecommerce_financing_heading.meet_corl .hero-content {
+    padding-right: 0;
+    padding-top: 60px;
+}
+
+
+
+
+
+
+section.capital_opportunities.sass_opportunities {
+    padding: 80px 15px 0;
+    text-align: center;
+}
+.capital_opportunities.sass_opportunities .capital_opportunities_title {
+    padding-right: 0;
+    margin-bottom: 40px;
+}
+.capital_opportunities.sass_opportunities .capital_opportunities_title h2 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 130%;
+    color: #1A3C41;
+}
+.capital_opportunities.sass_opportunities  .capital_banner_wrapper {
+    margin-left: 20px;
+    margin-top: 40px;
+}
+.capital_opportunities.sass_opportunities .capital_opportunities_title span {
+    font-size: 16px;
+    padding-bottom: 10px;
+    display: block;
+}
+
+
+
+.revenue_benefits_wrapper {
+    flex-wrap: wrap;
+    text-align: left;
+}
+.benefits_bg {
+    position: relative;
+    padding-bottom: 60px;
+    padding: 60px 15px;
+}
+.revenue_benefits_wrapper .revenue_benefits_single {
+    width: 100%;
+    padding: 15px;
+    margin-right: 0px;
+    margin-bottom: 30px;
+}
+.revenue_benefits .revenue_benefits_wrapper .revenue_benefits_single  h3 {
+    font-size: 18px;
+}
+.revenue_benefits .revenue_benefits_wrapper .revenue_benefits_single:last-child {
+    margin-left: 0px;
+}
+.how_it_works.revenue-sharing .how_it_works_single_items::before {
+    right: 30%;
+    z-index: 1;
+}
+
+.provide_info .provide_info_single_info {
+    margin: 0 30px 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ }
+
+
+ @media only screen and (min-device-width: 768px) and (max-device-width: 991px) {
+     .container,
+     .container-sm {
+         max-width: 100%;
+         padding: 0 15px;
+     }
+     .success_stories {
+        padding: 80px 0px 50px 0px !important;
+    }
+
+    .sass_commerce .banner_shape img.shape_1 {
+        height: 45%;
+    }
+    .amount_calculate .form_wrapper {
+        padding-right: 15px;
+    }
+    .success_stories {
+        padding: 80px 0px 50px 0px;
+        margin-top: -30px;
+        z-index: 9;
+        position: relative;
+    }
+
+
+     .header-section {
+         width: 100%;
+         z-index: 999;
+         display: none;
+     }
+     .hero-display-section {
+         min-height: 430px;
+     }
+     .hero-display-section .box-wrappr {
+         padding-top: 50px;
+     }
+     .hero-display-section .box-wrappr h1 {
+         font-size: 35px;
+         line-height: 40px;
+         padding-top: 40px;
+     }
+     .hero-display-section .box-wrappr p {
+         font-size: 14px;
+         line-height: 26px;
+     }
+     .newsletter {
+         padding-top: 15px;
+     }
+     .newsletter form .input-group {
+         width: 300px;
+     }
+     .newsletter input.form-control {
+         height: 45px;
+         padding-left: 15px;
+         border-right: none;
+     }
+     .newsletter button.btn.btn-theme {
+         height: 45px;
+         width: 110px;
+         font-size: 15px;
+     }
+
+
+
+     .company-logo-wrapper img {
+         width: 80%;
+     }
+
+
+
+     .why_corl .why_corl_single_items .title_icon .title {
+         font-size: 16px;
+     }
+
+
+
+     .how_it_works_single_items::before {
+         right: -36%;
+     }
+     .how_it_works .how_it_works_single_items {
+         background: #FFFFFF;
+         box-shadow: 32px 49px 80px rgba(125, 149, 169, 0.12);
+         border-radius: 10px;
+         min-width: 200px;
+         padding: 33px 0 28px;
+     }
+     .work_single_item_wrapper {
+         justify-content: space-between !important;
+     }
+     .how_it_works_single_items::before {
+         right: -48%;
+         transform: translate(-48%) rotate(6deg) scale(0.5) !important
+     }
+
+
+
+
+
+
+     .ecommerce_financing_heading {
+        margin: 66px 10px 65px;
+        padding: 0px 24px 120px;
+        text-align: left;
+    }
+    .how_it_works.ecommerce_works .how_it_works_single_items {
+        min-width: 22%;
+        padding: 30px 15px;
+    }
+    .how_it_works.ecommerce_works .how_it_works_single_items::before {
+        display: none;
+    }
+  
+
+
+
+
+    .ecommerce_financing_heading.sass_financing {
+        padding: 0 15px 150px;
+    }
+    .sass_financing .sass_check ul li {
+        padding-right: 15px;
+        font-size: 16px;
+    }
+    .sass_financing .sass_check ul li .icon{
+        width: 20px;
+    }
+    .sass_financing .sass_check ul li .icon img{
+        width: 20px;
+    }
+
+
+
+    
+    section.why_corl.ecommece_why_corl .why_corl_single_items .title_icon .title {
+        font-size: 14px;
+    }
+    .capital_opportunities .capital_opportunities_title span {
+        font-size: 18px;
+    }
+    .capital_opportunities .capital_opportunities_title h2 {
+        font-size: 24px;
+    }
+    .capital_opportunities .button_style .button_style_1 {
+        font-size: 14px;
+        height: 54px;
+        line-height: 54px;
+        display: inline-block;
+        padding: 0 20px;
+    }
+
+
+.row.block_design_items {
+    flex-direction: unset;
+}
+.block_design_one {
+    text-align: left;
+}
+.ecommerce_financing_heading.meet_corl .commerce_finance_banner img {
+    width: 100%;
+}
+.company-logo-display-sectionr.meet_logo_style img {
+    height: 29px !important;
+    width: auto;
+}
+.testimonial_style_two .testimonial_content {
+    margin: -110px 15px 0;
+}
+
+
+
+
+.case_study_style_3 {
+    text-align: left;
+}
+
+.how_it_works.ecommerce_works.case_study_works.case_work_style_3 .how_work_three_four.work_single_item_wrapper {
+    padding: 0 100px;
+}
+.footer_section .row.footer_menu_wrapper {
+    align-items: unset;
+    justify-content: center;
+}
+.ecommerce_financing_heading.sass_financing.loop_case .commerce_finance_banner {
+    position: unset;
+    padding: 0;
+}
+
+
+
+.ecommerce_financing_heading.sass_financing {
+    padding: 0 15px 0px;
+}
+section.capital_opportunities.sass_opportunities {
+    text-align: left;
+}
+.how_it_works .how_it_works_single_items .content p {
+    font-size: 14px;
+}
+.case_studies .case_studies_single .content p {
+    font-size: 14px;
+}
+
+
+.how_it_works_single_items::before {
+    bottom: unset;
+    top: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+ }

