@@ -211,7 +211,7 @@ class AboutTeamWidget extends Widget_Base
                             <div class="col-12 col-sm-10 offset-md-0 offset-sm-1 col-md-6 col-lg-4 col-xl-3">
                                 <div class="team_single_member">
                                     <div class="user_profile">
-                                        <?php echo wp_get_attachment_image($singleteam['advisor_memeber_image']['id'], 'large', null, ['class' => 'img-fluid']); ?>
+                                        <?php echo wp_get_attachment_image($singleadvisor['advisor_memeber_image']['id'], 'large', null, ['class' => 'img-fluid']); ?>
                                     </div>
                                     <div class="team_member_info">
                                         <h4 class="name m-0"><?php echo $singleadvisor['advisor_member_name']; ?></h4>
