@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 
 // compare table widget here
@@ -6,92 +6,90 @@
 namespace Elementor;
 
 
-class CompareTableWidget extends Widget_Base{
+class CompareTableWidget extends Widget_Base
+{
 
 
-    public function get_name() {
+    public function get_name()
+    {
         return "compare-table-widget";
     }
 
-	public function get_title() {
+    public function get_title()
+    {
         return "Compare Table";
     }
 
-	public function get_icon() {
+    public function get_icon()
+    {
         return "eicon-favorite";
     }
 
-	 public function get_categories() {
-        return [ 'corl-theme' ];
-     }
+    public function get_categories()
+    {
+        return ['corl-theme'];
+    }
 
-	
+
     //public function get_script_depends() {}
 
-	//public function get_style_depends() {}
+    //public function get_style_depends() {}
 
-	protected function register_controls() {
+    protected function register_controls()
+    {
 
         $this->start_controls_section(
-			'compare_table_section',
-			[
-				'label' => __( 'Content', 'corl' ),
-				'tab' => Controls_Manager::TAB_CONTENT,
-			]
-		);
+            'compare_table_section',
+            [
+                'label' => __('Content', 'corl'),
+                'tab' => Controls_Manager::TAB_CONTENT,
+            ]
+        );
 
 
         //Title
         $this->add_control(
-			'compare_table_title',
-			[
-				'label' => __( 'Title', 'corl' ),
-				'type' => Controls_Manager::TEXT,
-                'default' => __( 'How do we compare?', 'corl' ),
-				'placeholder' => __( 'Type Title here', 'corl' ),
-			]
-		);
+            'compare_table_title',
+            [
+                'label' => __('Title', 'corl'),
+                'type' => Controls_Manager::TEXT,
+                'default' => __('How do we compare?', 'corl'),
+                'placeholder' => __('Type Title here', 'corl'),
+            ]
+        );
 
 
         $this->add_control(
-			'compare_table_buttton_text',
-			[
-				'label' => __( 'Button Text', 'corl' ),
-				'type' => Controls_Manager::TEXT,
-                'default' => __( 'Let\'s Grow', 'corl' ),
-			]
-		);
+            'compare_table_buttton_text',
+            [
+                'label' => __('Button Text', 'corl'),
+                'type' => Controls_Manager::TEXT,
+                'default' => __('Let\'s Grow', 'corl'),
+            ]
+        );
 
         $this->add_control(
-			'compare_table_buttton_url',
-			[
-				'label' => __( 'Button URL', 'corl' ),
-				'type' => Controls_Manager::URL,
-			]
-		);
+            'compare_table_buttton_url',
+            [
+                'label' => __('Button URL', 'corl'),
+                'type' => Controls_Manager::URL,
+            ]
+        );
 
 
-    
-
-
-		$this->end_controls_section();
+        $this->end_controls_section();
 
         $this->start_controls_section(
-			'compare_table_single_item_one',
-			[
-				'label' => __( 'First Column Items', 'corl' ),
-				'tab' => Controls_Manager::TAB_CONTENT,
-			]
-		);
+            'compare_table_single_item_one',
+            [
+                'label' => __('First Column Items', 'corl'),
+                'tab' => Controls_Manager::TAB_CONTENT,
+            ]
+        );
 
-        
-
-        
 
         // here all first colum items
         $repeater = new \Elementor\Repeater();
-
-		
 
 
         $repeater->add_control(
@@ -112,23 +110,26 @@ class CompareTableWidget extends Widget_Base{
                         'title' => esc_html__('Icon', 'corl'),
                         'icon' => 'fa fa-info-circle',
                     ],
-                    
+                    'textAndIcon' => [
+                        'title' => esc_html__('Text and Icon', 'corl'),
+                        'icon' => 'fa  fa-icons',
+                    ],
+
                 ],
                 'default' => 'text',
                 'toggle' => true,
             ]
         );
 
-        
 
         $repeater->add_control(
             '1st_column_cell_item_text',
             [
                 'label' => esc_html__('Text', 'corl'),
                 'type' => Controls_Manager::TEXT,
-                'dynamic'     => [ 'active' => true ],
+                'dynamic' => ['active' => true],
                 'condition' => [
-                    'first_colunm_text_icon' => 'textcell',
+                    'first_colunm_text_icon' => ['textcell', 'textAndIcon'],
                 ],
             ]
         );
@@ -143,46 +144,84 @@ class CompareTableWidget extends Widget_Base{
                     'library' => 'solid',
                 ],
                 'condition' => [
-                    'first_colunm_text_icon' => 'iconcell',
+                    'first_colunm_text_icon' => ['iconcell', 'textAndIcon'],
                 ],
             ]
         );
 
-		
+        $repeater->add_control(
+            '1st_column_icon_color',
+            [
+                'label' => esc_html__('Icon Color', 'corl'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} {{CURRENT_ITEM}} .icon' => 'color: {{VALUE}}',
+                ],
 
 
+            ]
+        );
+        $repeater->add_control(
+            '1st_icon_padding',
+            [
+                'type' => Controls_Manager::DIMENSIONS,
+                'label' => esc_html__( 'Icon Padding', 'corl' ),
+                'size_units' => [ 'px', 'em', '%' ],
+                'selectors' => [
+                    '{{WRAPPER}} {{CURRENT_ITEM}} .icon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
 
 
-		$this->add_control(
-			'first_list',
-			[
-				'label' => esc_html__( 'Cloumn List', 'corl' ),
-				'type' => \Elementor\Controls_Manager::REPEATER,
-				'fields' => $repeater->get_controls(),
-				'title_field' => '{{{ first_colunm_text_icon }}}',
-			]
-		);
+        $repeater->add_control(
+            '1st_column_position_textAndIcon',
+            [
+                'label' => esc_html__('Position', 'corl'),
+                'type' => Controls_Manager::CHOOSE,
+                'options' => [
+                    'icon_left' => [
+                        'title' => esc_html__('Icon Left', 'corl'),
+                        'icon' => 'fa fa-left',
+                    ],
+                    'icon_right' => [
+                        'title' => esc_html__('Icon Right', 'corl'),
+                        'icon' => 'fa fa-right',
+                    ],
+                ],
+                'default' => 'icon_left',
+                'toggle' => true,
+                'condition' => [
+                    'first_colunm_text_icon' => ['textAndIcon'],
+                ],
+            ]
+        );
 
 
+        $this->add_control(
+            'first_list',
+            [
+                'label' => esc_html__('Cloumn List', 'corl'),
+                'type' => \Elementor\Controls_Manager::REPEATER,
+                'fields' => $repeater->get_controls(),
+                'title_field' => '{{{ first_colunm_text_icon }}}',
+            ]
+        );
 
-
-        
 
         $this->end_controls_section();
 
 
         $this->start_controls_section(
-			'compare_table_single_item_two',
-			[
-				'label' => __( 'Second Column Items', 'corl' ),
-				'tab' => Controls_Manager::TAB_CONTENT,
-			]
-		);
+            'compare_table_single_item_two',
+            [
+                'label' => __('Second Column Items', 'corl'),
+                'tab' => Controls_Manager::TAB_CONTENT,
+            ]
+        );
 
         // here all second colum items
         $repeater2 = new \Elementor\Repeater();
-
-		
 
 
         $repeater2->add_control(
@@ -203,23 +242,26 @@ class CompareTableWidget extends Widget_Base{
                         'title' => esc_html__('Icon', 'corl'),
                         'icon' => 'fa fa-info-circle',
                     ],
-                    
+                    'secondtextAndIcon' => [
+                        'title' => esc_html__('Text and Icon', 'corl'),
+                        'icon' => 'fa  fa-icons',
+                    ],
+
                 ],
                 'default' => 'text',
                 'toggle' => true,
             ]
         );
 
-        
 
         $repeater2->add_control(
             'second_column_cell_item_text',
             [
                 'label' => esc_html__('Text', 'corl'),
                 'type' => Controls_Manager::TEXT,
-                'dynamic'     => [ 'active' => true ],
+                'dynamic' => ['active' => true],
                 'condition' => [
-                    'second_colunm_text_icon' => 'secondtextcell',
+                    'second_colunm_text_icon' => ['secondtextcell','secondtextAndIcon'],
                 ],
             ]
         );
@@ -234,44 +276,83 @@ class CompareTableWidget extends Widget_Base{
                     'library' => 'solid',
                 ],
                 'condition' => [
-                    'second_colunm_text_icon' => 'secondiconcell',
+                    'second_colunm_text_icon' => ['secondiconcell','secondtextAndIcon'],
+                ],
+            ]
+        );
+        $repeater2->add_control(
+            '2st_column_icon_color',
+            [
+                'label' => esc_html__('Icon Color', 'corl'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} {{CURRENT_ITEM}} .icon' => 'color: {{VALUE}}',
+                ],
+
+
+            ]
+        );
+        $repeater2->add_control(
+            '2st_title_padding',
+            [
+                'type' => Controls_Manager::DIMENSIONS,
+                'label' => esc_html__( 'Icon Padding', 'corl' ),
+                'size_units' => [ 'px', 'em', '%' ],
+                'selectors' => [
+                    '{{WRAPPER}} {{CURRENT_ITEM}} .icon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+        $repeater2->add_control(
+            '2st_column_position_textAndIcon',
+            [
+                'label' => esc_html__('Position', 'corl'),
+                'type' => Controls_Manager::CHOOSE,
+                'options' => [
+                    'icon_left' => [
+                        'title' => esc_html__('Icon Left', 'corl'),
+                        'icon' => 'fa fa-left',
+                    ],
+                    'icon_right' => [
+                        'title' => esc_html__('Icon Right', 'corl'),
+                        'icon' => 'fa fa-right',
+                    ],
+                ],
+                'default' => 'icon_left',
+                'toggle' => true,
+                'condition' => [
+                    'second_colunm_text_icon' => ['secondtextAndIcon'],
                 ],
             ]
         );
 
-		
 
 
+        $this->add_control(
+            'second_list',
+            [
+                'label' => esc_html__('Second Cloumn List', 'corl'),
+                'type' => \Elementor\Controls_Manager::REPEATER,
+                'fields' => $repeater2->get_controls(),
+                'title_field' => '{{{ second_colunm_text_icon }}}',
+            ]
+        );
 
-
-		$this->add_control(
-			'second_list',
-			[
-				'label' => esc_html__( 'Second Cloumn List', 'corl' ),
-				'type' => \Elementor\Controls_Manager::REPEATER,
-				'fields' => $repeater2->get_controls(),
-				'title_field' => '{{{ second_colunm_text_icon }}}',
-			]
-		);
-
-        
 
         $this->end_controls_section();
 
 
         $this->start_controls_section(
-			'compare_table_single_item_threee',
-			[
-				'label' => __( 'Third Column Items', 'corl' ),
-				'tab' => Controls_Manager::TAB_CONTENT,
-			]
-		);
+            'compare_table_single_item_threee',
+            [
+                'label' => __('Third Column Items', 'corl'),
+                'tab' => Controls_Manager::TAB_CONTENT,
+            ]
+        );
 
         // here all 3rd colum items
 
         $repeater3 = new \Elementor\Repeater();
-
-		
 
 
         $repeater3->add_control(
@@ -292,23 +373,26 @@ class CompareTableWidget extends Widget_Base{
                         'title' => esc_html__('Icon', 'corl'),
                         'icon' => 'fa fa-info-circle',
                     ],
-                    
+                    'thirdtextAndIcon' => [
+                        'title' => esc_html__('Text and Icon', 'corl'),
+                        'icon' => 'fa  fa-icons',
+                    ],
+
                 ],
                 'default' => 'text',
                 'toggle' => true,
             ]
         );
 
-        
 
         $repeater3->add_control(
             'third_column_cell_item_text',
             [
                 'label' => esc_html__('Text', 'corl'),
                 'type' => Controls_Manager::TEXT,
-                'dynamic'     => [ 'active' => true ],
+                'dynamic' => ['active' => true],
                 'condition' => [
-                    'third_colunm_text_icon' => 'thirdtextcell',
+                    'third_colunm_text_icon' => ['thirdtextcell','thirdtextAndIcon'],
                 ],
             ]
         );
@@ -323,43 +407,82 @@ class CompareTableWidget extends Widget_Base{
                     'library' => 'solid',
                 ],
                 'condition' => [
-                    'third_colunm_text_icon' => 'thirdiconcell',
+                    'third_colunm_text_icon' =>[ 'thirdiconcell','thirdtextAndIcon'],
+                ],
+            ]
+        );
+        $repeater3->add_control(
+            '3st_column_icon_color',
+            [
+                'label' => esc_html__('Icon Color', 'corl'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} {{CURRENT_ITEM}} .icon' => 'color: {{VALUE}}',
+                ],
+
+
+            ]
+        );
+        $repeater3->add_control(
+            '3st_title_padding',
+            [
+                'type' => Controls_Manager::DIMENSIONS,
+                'label' => esc_html__( 'Icon Padding', 'corl' ),
+                'size_units' => [ 'px', 'em', '%' ],
+                'selectors' => [
+                    '{{WRAPPER}} {{CURRENT_ITEM}} .icon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
 
-		
+        $repeater3->add_control(
+            '3st_column_position_textAndIcon',
+            [
+                'label' => esc_html__('Position', 'corl'),
+                'type' => Controls_Manager::CHOOSE,
+                'options' => [
+                    'icon_left' => [
+                        'title' => esc_html__('Icon Left', 'corl'),
+                        'icon' => 'fa fa-left',
+                    ],
+                    'icon_right' => [
+                        'title' => esc_html__('Icon Right', 'corl'),
+                        'icon' => 'fa fa-right',
+                    ],
+                ],
+                'default' => 'icon_left',
+                'toggle' => true,
+                'condition' => [
+                    'third_colunm_text_icon' => ['thirdtextAndIcon'],
+                ],
+            ]
+        );
 
 
+        $this->add_control(
+            'third_list',
+            [
+                'label' => esc_html__('Third Cloumn List', 'corl'),
+                'type' => \Elementor\Controls_Manager::REPEATER,
+                'fields' => $repeater3->get_controls(),
+                'title_field' => '{{{ third_colunm_text_icon }}}',
+            ]
+        );
 
-
-		$this->add_control(
-			'third_list',
-			[
-				'label' => esc_html__( 'Third Cloumn List', 'corl' ),
-				'type' => \Elementor\Controls_Manager::REPEATER,
-				'fields' => $repeater3->get_controls(),
-				'title_field' => '{{{ third_colunm_text_icon }}}',
-			]
-		);
-
-        
 
         $this->end_controls_section();
 
         $this->start_controls_section(
-			'compare_table_single_item_fourth',
-			[
-				'label' => __( 'Fourth Column Items', 'corl' ),
-				'tab' => Controls_Manager::TAB_CONTENT,
-			]
-		);
+            'compare_table_single_item_fourth',
+            [
+                'label' => __('Fourth Column Items', 'corl'),
+                'tab' => Controls_Manager::TAB_CONTENT,
+            ]
+        );
 
         // here all 4th colum items
 
         $repeater4 = new \Elementor\Repeater();
-
-		
 
 
         $repeater4->add_control(
@@ -380,23 +503,26 @@ class CompareTableWidget extends Widget_Base{
                         'title' => esc_html__('Icon', 'corl'),
                         'icon' => 'fa fa-info-circle',
                     ],
-                    
+                    'fourthtextAndIcon' => [
+                        'title' => esc_html__('Text and Icon', 'corl'),
+                        'icon' => 'fa  fa-icons',
+                    ],
+
                 ],
                 'default' => 'text',
                 'toggle' => true,
             ]
         );
 
-        
 
         $repeater4->add_control(
             'fourth_column_cell_item_text',
             [
                 'label' => esc_html__('Text', 'corl'),
                 'type' => Controls_Manager::TEXT,
-                'dynamic'     => [ 'active' => true ],
+                'dynamic' => ['active' => true],
                 'condition' => [
-                    'fourth_colunm_text_icon' => 'fourthtextcell',
+                    'fourth_colunm_text_icon' => ['fourthtextcell','fourthtextAndIcon'],
                 ],
             ]
         );
@@ -411,40 +537,76 @@ class CompareTableWidget extends Widget_Base{
                     'library' => 'solid',
                 ],
                 'condition' => [
-                    'fourth_colunm_text_icon' => 'fourthiconcell',
+                    'fourth_colunm_text_icon' => ['fourthiconcell','fourthtextAndIcon'],
+                ],
+            ]
+        );
+        $repeater4->add_control(
+            '4st_column_icon_color',
+            [
+                'label' => esc_html__('Icon Color', 'corl'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} {{CURRENT_ITEM}} .icon' => 'color: {{VALUE}}',
+                ],
+
+
+            ]
+        );
+        $repeater4->add_control(
+            '4st_title_padding',
+            [
+                'type' => Controls_Manager::DIMENSIONS,
+                'label' => esc_html__( 'Icon Padding', 'corl' ),
+                'size_units' => [ 'px', 'em', '%' ],
+                'selectors' => [
+                    '{{WRAPPER}} {{CURRENT_ITEM}} .icon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+        $repeater4->add_control(
+            '4st_column_position_textAndIcon',
+            [
+                'label' => esc_html__('Position', 'corl'),
+                'type' => Controls_Manager::CHOOSE,
+                'options' => [
+                    'icon_left' => [
+                        'title' => esc_html__('Icon Left', 'corl'),
+                        'icon' => 'fa fa-left',
+                    ],
+                    'icon_right' => [
+                        'title' => esc_html__('Icon Right', 'corl'),
+                        'icon' => 'fa fa-right',
+                    ],
+                ],
+                'default' => 'icon_left',
+                'toggle' => true,
+                'condition' => [
+                    'fourth_colunm_text_icon' => ['textAndIcon'],
                 ],
             ]
         );
 
-		
 
 
+        $this->add_control(
+            'fourth_list',
+            [
+                'label' => esc_html__('Fourth Cloumn List', 'corl'),
+                'type' => \Elementor\Controls_Manager::REPEATER,
+                'fields' => $repeater4->get_controls(),
+                'title_field' => '{{{ fourth_colunm_text_icon }}}',
+            ]
+        );
 
-
-		$this->add_control(
-			'fourth_list',
-			[
-				'label' => esc_html__( 'Fourth Cloumn List', 'corl' ),
-				'type' => \Elementor\Controls_Manager::REPEATER,
-				'fields' => $repeater4->get_controls(),
-				'title_field' => '{{{ fourth_colunm_text_icon }}}',
-			]
-		);
-
-        
 
         $this->end_controls_section();
 
 
-
-
-
-
-
-
     }
 
-	protected function render() {
+    protected function render()
+    {
 
         $settings = $this->get_settings_for_display();
 
@@ -452,14 +614,13 @@ class CompareTableWidget extends Widget_Base{
         $compare_table_buttton_text = $settings['compare_table_buttton_text'];
         $compare_table_buttton_url = $settings['compare_table_buttton_url']['url'];
 
-        
+
         $first_list = $settings['first_list'];
         $second_list = $settings['second_list'];
         $third_list = $settings['third_list'];
         $fourth_list = $settings['fourth_list'];
 
-    
-       
+
         ?>
 
         <!-- Start How It Works Section -->
@@ -468,7 +629,7 @@ class CompareTableWidget extends Widget_Base{
                 <div class="row">
                     <div class="col-12 text-center">
                         <div class="section_title">
-                            <h2 class="m-0"><?php echo $compare_table_title;?></h2>
+                            <h2 class="m-0"><?php echo $compare_table_title; ?></h2>
                         </div>
                     </div>
                 </div>
@@ -479,67 +640,56 @@ class CompareTableWidget extends Widget_Base{
                             <div class="compare_table">
                                 <div class="signle_items">
                                     <ul>
-
-                                       <?php foreach($first_list as $first_item){
-
-                                           $text_item = $first_item['1st_column_cell_item_text'];
-                                           $icon_item = $first_item['1st_column_cell_item_icon'];
-                                           if($text_item){
-                                            echo '<li>'. $text_item.'</li>';
-                                           }elseif($icon_item){
-                                            echo '<li><i class="'. $icon_item['value'].'"></i></li>';
-                                           }else{
-                                            echo '<li></li>';
-                                           }
-
-                                           
-
-                                            
-
-                                       } ?>
-
-                                        
-                                    </ul>
-                                </div>
-
-                                <div class="signle_items">
-                                    <ul>
-                                    <?php foreach($second_list as $second_item){
-
-                                        $second_text_item = $second_item['second_column_cell_item_text'];
-                                        $second_icon_item = $second_item['second_column_cell_item_icon'];
-                                        if($second_text_item){
-                                        echo '<li>'. $second_text_item.'</li>';
-                                        }elseif($second_icon_item){
-                                        echo '<li><i class="'. $second_icon_item['value'].'"></i></li>';
-                                        }else{
-                                        echo '<li></li>';
-                                        }
-
-
-
-                                        
+                                        <?php foreach ($first_list as $first_item) {
+                                            $text_item = $first_item['1st_column_cell_item_text'];
+                                            $icon_item = $first_item['1st_column_cell_item_icon'];
+                                            $icon_item = $icon_item ? '<i  class="icon ' . $icon_item['value'] . '"></i>' : '';
+                                            if ($first_item['first_colunm_text_icon'] == 'textAndIcon') {
+                                                echo '<li class="elementor-repeater-item-' . $first_item['_id'].'">';
+                                                if ($first_item['1st_column_position_textAndIcon'] == 'icon_right') {
+                                                    echo $text_item . $icon_item;
+                                                } else {
+                                                    echo $icon_item . $text_item;
+                                                }
+                                                echo '</li>';
+                                            } elseif ($text_item) {
+                                                echo '<li>' . $text_item . '</li>';
+                                            } elseif ($icon_item) {
+                                                echo '<li>' . $icon_item . '</li>';
+                                            } else {
+                                                echo '<li></li>';
+                                            }
 
                                         } ?>
+
+
                                     </ul>
                                 </div>
 
                                 <div class="signle_items">
                                     <ul>
-                                    <?php foreach($third_list as $third_item){
+                                        <?php foreach ($second_list as $second_item) {
 
-                                        $third_text_item = $third_item['third_column_cell_item_text'];
-                                        $third_icon_item = $third_item['third_column_cell_item_icon'];
-                                        if($third_text_item){
-                                        echo '<li>'. $third_text_item.'</li>';
-                                        }elseif($third_icon_item){
-                                        echo '<li><i class="'. $third_icon_item['value'].'"></i></li>';
-                                        }else{
-                                        echo '<li></li>';
-                                        }
+                                            $second_text_item = $second_item['second_column_cell_item_text'];
+                                            $second_icon_item = $second_item['second_column_cell_item_icon'];
+                                            $second_icon_item = $second_icon_item ? '<i  class="icon ' . $second_icon_item['value'] . '"></i>' : '';
 
-
-
+                                            if ($second_item['second_colunm_text_icon'] == 'textAndIcon') {
+                                                echo '<li class="elementor-repeater-item-' . $second_item['_id'].'">';
+                                                if ($second_item['2st_column_position_textAndIcon'] == 'secondtextAndIcon') {
+                                                    echo $second_text_item . $second_icon_item;
+                                                } else {
+                                                    echo $second_icon_item . $second_text_item;
+                                                }
+                                                echo '</li>';
+                                            }
+                                            elseif ($second_text_item) {
+                                                echo '<li>' . $second_text_item . '</li>';
+                                            } elseif ($second_icon_item) {
+                                                echo '<li>' . $second_icon_item. '</li>';
+                                            } else {
+                                                echo '<li></li>';
+                                            }
 
 
                                         } ?>
@@ -548,20 +698,58 @@ class CompareTableWidget extends Widget_Base{
 
                                 <div class="signle_items">
                                     <ul>
-                                    <?php foreach($fourth_list as $fourth_item){
+                                        <?php foreach ($third_list as $third_item) {
 
-                                        $fourth_text_item = $fourth_item['fourth_column_cell_item_text'];
-                                        $fourth_icon_item = $fourth_item['fourth_column_cell_item_icon'];
-                                        if($fourth_text_item){
-                                        echo '<li>'. $fourth_text_item.'</li>';
-                                        }elseif($fourth_icon_item){
-                                        echo '<li><i class="'. $fourth_icon_item['value'].'"></i></li>';
-                                        }else{
-                                        echo '<li></li>';
-                                        }
+                                            $third_text_item = $third_item['third_column_cell_item_text'];
+                                            $third_icon_item = $third_item['third_column_cell_item_icon'];
+                                            $third_icon_item =  $third_icon_item ? '<i  class="icon ' .  $third_icon_item['value'] . '"></i>' : '';
+
+                                            if ($third_item['third_colunm_text_icon'] == 'thirdtextAndIcon') {
+                                                echo '<li class="elementor-repeater-item-' . $third_item['_id'].'">';
+                                                if ($third_item['3st_column_position_textAndIcon'] == 'icon_right') {
+                                                    echo  $third_text_item .  $third_icon_item;
+                                                } else {
+                                                    echo  $third_icon_item .  $third_text_item;
+                                                }
+                                                echo '</li>';
+                                            }
+                                            elseif ($third_text_item) {
+                                                echo '<li>' . $third_text_item . '</li>';
+                                            } elseif ($third_icon_item) {
+                                                echo '<li>' . $third_icon_item . '</li>';
+                                            } else {
+                                                echo '<li></li>';
+                                            }
 
 
+                                        } ?>
+                                    </ul>
+                                </div>
 
+                                <div class="signle_items">
+                                    <ul>
+                                        <?php foreach ($fourth_list as $fourth_item) {
+
+                                            $fourth_text_item = $fourth_item['fourth_column_cell_item_text'];
+                                            $fourth_icon_item = $fourth_item['fourth_column_cell_item_icon'];
+                                            $fourth_icon_item =  $fourth_icon_item ? '<i  class="icon ' .  $fourth_icon_item['value'] . '"></i>' : '';
+
+                                            if ($fourth_item['fourth_colunm_text_icon'] == 'fourthtextAndIcon') {
+                                                echo '<li class="elementor-repeater-item-' . $fourth_item['_id'].'">';
+                                                if ($fourth_item['4st_column_position_textAndIcon'] == 'icon_right') {
+                                                    echo  $fourth_text_item .  $fourth_icon_item;
+                                                } else {
+                                                    echo  $fourth_icon_item .  $fourth_text_item;
+                                                }
+                                                echo '</li>';
+                                            }
+                                            elseif ($fourth_text_item) {
+                                                echo '<li>' . $fourth_text_item . '</li>';
+                                            } elseif ($fourth_icon_item) {
+                                                echo '<li>'.$fourth_icon_item.'</li>';
+                                            } else {
+                                                echo '<li></li>';
+                                            }
 
 
                                         } ?>
@@ -571,11 +759,12 @@ class CompareTableWidget extends Widget_Base{
                         </div>
                     </div>
                     <div class="col-12 col-md-12 text-center">
-                        <?php if($compare_table_buttton_text){?>
-                        <div class="button_style">
-                            <a href="<?php echo $compare_table_buttton_url; ?>" class="button_style_1"><?php echo $compare_table_buttton_text; ?></a>
-                        </div>
-                        <?php }  ?>
+                        <?php if ($compare_table_buttton_text) { ?>
+                            <div class="button_style">
+                                <a href="<?php echo $compare_table_buttton_url; ?>"
+                                   class="button_style_1"><?php echo $compare_table_buttton_text; ?></a>
+                            </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
@@ -583,17 +772,12 @@ class CompareTableWidget extends Widget_Base{
         <!-- End How It Works Section -->
 
 
+        <?php
 
-
-
-
-<?php 
-		
 
     }
 
 
-
 }
 
-plugin::instance()->widgets_manager->register_widget_type( new CompareTableWidget);
+plugin::instance()->widgets_manager->register_widget_type(new CompareTableWidget);
