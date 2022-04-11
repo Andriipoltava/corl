@@ -11,7 +11,7 @@
  *
  * @package corl
  */
-
+$page_for_posts = get_option('page_for_posts');
 get_header();
 ?>
 
@@ -31,7 +31,9 @@ get_header();
                         <div class="col-12 col-md-6 col-lg-6">
                             <div class="hero-content">
 							<h1 class="page-title"><?php single_post_title(); ?></h1>
-                                <p>Corl is an artificially-intelligent platform that finances businesses in the digital economy and shares in their future revenue.</p>
+                                <p>
+                                    <?php echo get_post_meta($page_for_posts,'corl_blog-description',true)?:'Corl 12 is an artificially-intelligent platform that finances businesses in the digital economy and shares in their future revenue.'; ?>
+                                </p>
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-6">

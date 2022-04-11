@@ -165,8 +165,8 @@ class CompareTableWidget extends Widget_Base
             '1st_icon_padding',
             [
                 'type' => Controls_Manager::DIMENSIONS,
-                'label' => esc_html__( 'Icon Padding', 'corl' ),
-                'size_units' => [ 'px', 'em', '%' ],
+                'label' => esc_html__('Icon Padding', 'corl'),
+                'size_units' => ['px', 'em', '%'],
                 'selectors' => [
                     '{{WRAPPER}} {{CURRENT_ITEM}} .icon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -180,16 +180,20 @@ class CompareTableWidget extends Widget_Base
                 'label' => esc_html__('Position', 'corl'),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
+                    'icon_top' => [
+                        'title' => esc_html__('Icon Top', 'corl'),
+                        'icon' => 'eicon-v-align-top',
+                    ],
                     'icon_left' => [
                         'title' => esc_html__('Icon Left', 'corl'),
-                        'icon' => 'fa fa-left',
+                        'icon' => 'eicon-h-align-left',
                     ],
                     'icon_right' => [
                         'title' => esc_html__('Icon Right', 'corl'),
-                        'icon' => 'fa fa-right',
+                        'icon' => 'eicon-h-align-right',
                     ],
                 ],
-                'default' => 'icon_left',
+                'default' => 'icon_top',
                 'toggle' => true,
                 'condition' => [
                     'first_colunm_text_icon' => ['textAndIcon'],
@@ -261,7 +265,7 @@ class CompareTableWidget extends Widget_Base
                 'type' => Controls_Manager::TEXT,
                 'dynamic' => ['active' => true],
                 'condition' => [
-                    'second_colunm_text_icon' => ['secondtextcell','secondtextAndIcon'],
+                    'second_colunm_text_icon' => ['secondtextcell', 'secondtextAndIcon'],
                 ],
             ]
         );
@@ -276,7 +280,7 @@ class CompareTableWidget extends Widget_Base
                     'library' => 'solid',
                 ],
                 'condition' => [
-                    'second_colunm_text_icon' => ['secondiconcell','secondtextAndIcon'],
+                    'second_colunm_text_icon' => ['secondiconcell', 'secondtextAndIcon'],
                 ],
             ]
         );
@@ -296,8 +300,8 @@ class CompareTableWidget extends Widget_Base
             '2st_title_padding',
             [
                 'type' => Controls_Manager::DIMENSIONS,
-                'label' => esc_html__( 'Icon Padding', 'corl' ),
-                'size_units' => [ 'px', 'em', '%' ],
+                'label' => esc_html__('Icon Padding', 'corl'),
+                'size_units' => ['px', 'em', '%'],
                 'selectors' => [
                     '{{WRAPPER}} {{CURRENT_ITEM}} .icon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -309,13 +313,17 @@ class CompareTableWidget extends Widget_Base
                 'label' => esc_html__('Position', 'corl'),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
+                    'icon_top' => [
+                        'title' => esc_html__('Icon Top', 'corl'),
+                        'icon' => 'eicon-v-align-top',
+                    ],
                     'icon_left' => [
                         'title' => esc_html__('Icon Left', 'corl'),
-                        'icon' => 'fa fa-left',
+                        'icon' => 'eicon-h-align-left',
                     ],
                     'icon_right' => [
                         'title' => esc_html__('Icon Right', 'corl'),
-                        'icon' => 'fa fa-right',
+                        'icon' => 'eicon-h-align-right',
                     ],
                 ],
                 'default' => 'icon_left',
@@ -325,7 +333,6 @@ class CompareTableWidget extends Widget_Base
                 ],
             ]
         );
-
 
 
         $this->add_control(
@@ -392,7 +399,7 @@ class CompareTableWidget extends Widget_Base
                 'type' => Controls_Manager::TEXT,
                 'dynamic' => ['active' => true],
                 'condition' => [
-                    'third_colunm_text_icon' => ['thirdtextcell','thirdtextAndIcon'],
+                    'third_colunm_text_icon' => ['thirdtextcell', 'thirdtextAndIcon'],
                 ],
             ]
         );
@@ -407,7 +414,7 @@ class CompareTableWidget extends Widget_Base
                     'library' => 'solid',
                 ],
                 'condition' => [
-                    'third_colunm_text_icon' =>[ 'thirdiconcell','thirdtextAndIcon'],
+                    'third_colunm_text_icon' => ['thirdiconcell', 'thirdtextAndIcon'],
                 ],
             ]
         );
@@ -427,8 +434,8 @@ class CompareTableWidget extends Widget_Base
             '3st_title_padding',
             [
                 'type' => Controls_Manager::DIMENSIONS,
-                'label' => esc_html__( 'Icon Padding', 'corl' ),
-                'size_units' => [ 'px', 'em', '%' ],
+                'label' => esc_html__('Icon Padding', 'corl'),
+                'size_units' => ['px', 'em', '%'],
                 'selectors' => [
                     '{{WRAPPER}} {{CURRENT_ITEM}} .icon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -441,16 +448,20 @@ class CompareTableWidget extends Widget_Base
                 'label' => esc_html__('Position', 'corl'),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
+                    'icon_top' => [
+                        'title' => esc_html__('Icon Top', 'corl'),
+                        'icon' => 'eicon-v-align-top',
+                    ],
                     'icon_left' => [
                         'title' => esc_html__('Icon Left', 'corl'),
-                        'icon' => 'fa fa-left',
+                        'icon' => 'eicon-h-align-left',
                     ],
                     'icon_right' => [
                         'title' => esc_html__('Icon Right', 'corl'),
-                        'icon' => 'fa fa-right',
+                        'icon' => 'eicon-h-align-right',
                     ],
                 ],
-                'default' => 'icon_left',
+                'default' => 'icon_top',
                 'toggle' => true,
                 'condition' => [
                     'third_colunm_text_icon' => ['thirdtextAndIcon'],
@@ -522,7 +533,7 @@ class CompareTableWidget extends Widget_Base
                 'type' => Controls_Manager::TEXT,
                 'dynamic' => ['active' => true],
                 'condition' => [
-                    'fourth_colunm_text_icon' => ['fourthtextcell','fourthtextAndIcon'],
+                    'fourth_colunm_text_icon' => ['fourthtextcell', 'fourthtextAndIcon'],
                 ],
             ]
         );
@@ -537,7 +548,7 @@ class CompareTableWidget extends Widget_Base
                     'library' => 'solid',
                 ],
                 'condition' => [
-                    'fourth_colunm_text_icon' => ['fourthiconcell','fourthtextAndIcon'],
+                    'fourth_colunm_text_icon' => ['fourthiconcell', 'fourthtextAndIcon'],
                 ],
             ]
         );
@@ -557,8 +568,8 @@ class CompareTableWidget extends Widget_Base
             '4st_title_padding',
             [
                 'type' => Controls_Manager::DIMENSIONS,
-                'label' => esc_html__( 'Icon Padding', 'corl' ),
-                'size_units' => [ 'px', 'em', '%' ],
+                'label' => esc_html__('Icon Padding', 'corl'),
+                'size_units' => ['px', 'em', '%'],
                 'selectors' => [
                     '{{WRAPPER}} {{CURRENT_ITEM}} .icon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -570,23 +581,26 @@ class CompareTableWidget extends Widget_Base
                 'label' => esc_html__('Position', 'corl'),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
+                        'icon_top' => [
+                    'title' => esc_html__('Icon Top', 'corl'),
+                    'icon' => 'eicon-v-align-top',
+                ],
                     'icon_left' => [
                         'title' => esc_html__('Icon Left', 'corl'),
-                        'icon' => 'fa fa-left',
+                        'icon' => 'eicon-h-align-left',
                     ],
                     'icon_right' => [
                         'title' => esc_html__('Icon Right', 'corl'),
-                        'icon' => 'fa fa-right',
+                        'icon' => 'eicon-h-align-right',
                     ],
                 ],
-                'default' => 'icon_left',
+                'default' => 'icon_top',
                 'toggle' => true,
                 'condition' => [
-                    'fourth_colunm_text_icon' => ['textAndIcon'],
+                    'fourth_colunm_text_icon' => ['fourthtextAndIcon'],
                 ],
             ]
         );
-
 
 
         $this->add_control(
@@ -645,7 +659,7 @@ class CompareTableWidget extends Widget_Base
                                             $icon_item = $first_item['1st_column_cell_item_icon'];
                                             $icon_item = $icon_item ? '<i  class="icon ' . $icon_item['value'] . '"></i>' : '';
                                             if ($first_item['first_colunm_text_icon'] == 'textAndIcon') {
-                                                echo '<li class="elementor-repeater-item-' . $first_item['_id'].'">';
+                                                echo '<li class="elementor-repeater-item-' . $first_item['_id'] . ' '.($first_item['1st_column_position_textAndIcon'] == 'icon_top'?"flex-column":"").'">';
                                                 if ($first_item['1st_column_position_textAndIcon'] == 'icon_right') {
                                                     echo $text_item . $icon_item;
                                                 } else {
@@ -674,19 +688,18 @@ class CompareTableWidget extends Widget_Base
                                             $second_icon_item = $second_item['second_column_cell_item_icon'];
                                             $second_icon_item = $second_icon_item ? '<i  class="icon ' . $second_icon_item['value'] . '"></i>' : '';
 
-                                            if ($second_item['second_colunm_text_icon'] == 'textAndIcon') {
-                                                echo '<li class="elementor-repeater-item-' . $second_item['_id'].'">';
-                                                if ($second_item['2st_column_position_textAndIcon'] == 'secondtextAndIcon') {
+                                            if ($second_item['second_colunm_text_icon'] == 'secondtextAndIcon') {
+                                                echo '<li class="elementor-repeater-item-' . $second_item['_id'] . ' '.($second_item['2st_column_position_textAndIcon'] == 'icon_top'?"flex-column":"").'">';
+                                                if ($second_item['2st_column_position_textAndIcon'] == 'icon_right') {
                                                     echo $second_text_item . $second_icon_item;
                                                 } else {
                                                     echo $second_icon_item . $second_text_item;
                                                 }
                                                 echo '</li>';
-                                            }
-                                            elseif ($second_text_item) {
+                                            } elseif ($second_text_item) {
                                                 echo '<li>' . $second_text_item . '</li>';
                                             } elseif ($second_icon_item) {
-                                                echo '<li>' . $second_icon_item. '</li>';
+                                                echo '<li>' . $second_icon_item . '</li>';
                                             } else {
                                                 echo '<li></li>';
                                             }
@@ -702,18 +715,17 @@ class CompareTableWidget extends Widget_Base
 
                                             $third_text_item = $third_item['third_column_cell_item_text'];
                                             $third_icon_item = $third_item['third_column_cell_item_icon'];
-                                            $third_icon_item =  $third_icon_item ? '<i  class="icon ' .  $third_icon_item['value'] . '"></i>' : '';
+                                            $third_icon_item = $third_icon_item ? '<i  class="icon ' . $third_icon_item['value'] . '"></i>' : '';
 
                                             if ($third_item['third_colunm_text_icon'] == 'thirdtextAndIcon') {
-                                                echo '<li class="elementor-repeater-item-' . $third_item['_id'].'">';
+                                                echo '<li class="elementor-repeater-item-' . $third_item['_id'] . ' '.($third_item['3st_column_position_textAndIcon'] == 'icon_top'?"flex-column":"").'">';
                                                 if ($third_item['3st_column_position_textAndIcon'] == 'icon_right') {
-                                                    echo  $third_text_item .  $third_icon_item;
-                                                } else {
-                                                    echo  $third_icon_item .  $third_text_item;
+                                                    echo $third_text_item . $third_icon_item;
+                                                }  else {
+                                                    echo $third_icon_item . $third_text_item;
                                                 }
                                                 echo '</li>';
-                                            }
-                                            elseif ($third_text_item) {
+                                            } elseif ($third_text_item) {
                                                 echo '<li>' . $third_text_item . '</li>';
                                             } elseif ($third_icon_item) {
                                                 echo '<li>' . $third_icon_item . '</li>';
@@ -732,21 +744,20 @@ class CompareTableWidget extends Widget_Base
 
                                             $fourth_text_item = $fourth_item['fourth_column_cell_item_text'];
                                             $fourth_icon_item = $fourth_item['fourth_column_cell_item_icon'];
-                                            $fourth_icon_item =  $fourth_icon_item ? '<i  class="icon ' .  $fourth_icon_item['value'] . '"></i>' : '';
+                                            $fourth_icon_item = $fourth_icon_item ? '<i  class="icon ' . $fourth_icon_item['value'] . '"></i>' : '';
 
                                             if ($fourth_item['fourth_colunm_text_icon'] == 'fourthtextAndIcon') {
-                                                echo '<li class="elementor-repeater-item-' . $fourth_item['_id'].'">';
+                                                echo '<li class="elementor-repeater-item-' . $fourth_item['_id'] . ' '.($fourth_item['4st_column_position_textAndIcon'] == 'icon_top'?"flex-column":"").'">';
                                                 if ($fourth_item['4st_column_position_textAndIcon'] == 'icon_right') {
-                                                    echo  $fourth_text_item .  $fourth_icon_item;
-                                                } else {
-                                                    echo  $fourth_icon_item .  $fourth_text_item;
+                                                    echo $fourth_text_item . $fourth_icon_item;
+                                                }  else {
+                                                    echo $fourth_icon_item . $fourth_text_item;
                                                 }
                                                 echo '</li>';
-                                            }
-                                            elseif ($fourth_text_item) {
+                                            } elseif ($fourth_text_item) {
                                                 echo '<li>' . $fourth_text_item . '</li>';
                                             } elseif ($fourth_icon_item) {
-                                                echo '<li>'.$fourth_icon_item.'</li>';
+                                                echo '<li>' . $fourth_icon_item . '</li>';
                                             } else {
                                                 echo '<li></li>';
                                             }
